@@ -89,6 +89,8 @@ BOOL fetchingInProgress;
         fetchingInProgress = NO;
         [self.refreshControl endRefreshing];
         self.instaList.tableFooterView = nil;
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Connection Error" message:@"Unable to connect and fetch Instagram Photos" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles: nil];
+        [alertView show];
     }
      ];
     [operation start];
