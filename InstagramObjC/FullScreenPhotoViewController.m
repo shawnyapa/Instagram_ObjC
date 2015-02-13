@@ -17,6 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.navigationItem.title = @"Photo Zoom";
     self.photoView.image = self.photoImage;
     self.scrollView.contentSize = self.photoView.image.size;
 }
