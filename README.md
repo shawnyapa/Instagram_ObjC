@@ -13,7 +13,7 @@ iOS Instagram Client written in Objective-C for a CodePath iOS Demo
 
 
 ## Libraries and Implementations
- - AFNetworking
+ - Alamofire
  - Instagram API
 
 
