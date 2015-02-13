@@ -49,8 +49,6 @@
     if ([segue.identifier  isEqual: @"showFullPhotoWithZoom"]) {
     FullScreenPhotoViewController *fullScreenPhotoVC = [segue destinationViewController];
     fullScreenPhotoVC.photoImage = _imageViewStandardResolution.image;
-        NSLog(@"Photo Detail Size Height %f", _imageViewStandardResolution.image.size.height);
-        NSLog(@"Photo Detail Size Width %f", _imageViewStandardResolution.image.size.width);
     }
 }
 

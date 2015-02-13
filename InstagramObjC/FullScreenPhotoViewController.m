@@ -17,11 +17,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    NSLog(@"ViewDidLoad");
     self.photoView.image = self.photoImage;
     self.scrollView.contentSize = self.photoView.image.size;
-    NSLog(@"Photo Size Height %f", self.photoImage.size.height);
-    NSLog(@"Photo Size Width %f", self.photoImage.size.width);
 }
 
 - (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView {

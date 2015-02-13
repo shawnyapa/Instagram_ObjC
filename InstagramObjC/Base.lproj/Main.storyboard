@@ -120,7 +120,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6zA-rO-MtC">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6zA-rO-MtC">
                                 <rect key="frame" x="16" y="431" width="568" height="169"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
@@ -182,14 +182,14 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="k4g-HO-ylv">
-                                        <rect key="frame" x="8" y="0.0" width="584" height="600"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                     </imageView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="k4g-HO-ylv" secondAttribute="trailing" constant="-8" id="1Ho-Y3-hfV"/>
+                                    <constraint firstAttribute="trailing" secondItem="k4g-HO-ylv" secondAttribute="trailing" id="1Ho-Y3-hfV"/>
                                     <constraint firstAttribute="centerX" secondItem="k4g-HO-ylv" secondAttribute="centerX" id="CeL-eS-Mk6"/>
                                     <constraint firstAttribute="bottom" secondItem="k4g-HO-ylv" secondAttribute="bottom" id="Fu7-aX-Egj"/>
-                                    <constraint firstItem="k4g-HO-ylv" firstAttribute="leading" secondItem="5Xt-a4-394" secondAttribute="leading" constant="8" id="QcC-J0-gEL"/>
+                                    <constraint firstItem="k4g-HO-ylv" firstAttribute="leading" secondItem="5Xt-a4-394" secondAttribute="leading" id="QcC-J0-gEL"/>
                                     <constraint firstAttribute="centerY" secondItem="k4g-HO-ylv" secondAttribute="centerY" id="cHZ-TK-r6u"/>
                                     <constraint firstItem="k4g-HO-ylv" firstAttribute="top" secondItem="5Xt-a4-394" secondAttribute="top" id="mUQ-NN-si0"/>
                                 </constraints>
@@ -207,6 +207,11 @@
                             <constraint firstAttribute="centerX" secondItem="5Xt-a4-394" secondAttribute="centerX" id="fBW-R2-XPj"/>
                             <constraint firstItem="9aF-Gx-H4m" firstAttribute="top" secondItem="5Xt-a4-394" secondAttribute="bottom" id="hBE-Mc-ksB"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="JYF-8A-OUp"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="photoView" destination="k4g-HO-ylv" id="jRG-Jt-aEu"/>
