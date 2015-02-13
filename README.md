@@ -2,7 +2,7 @@
 iOS Instagram Client written in Objective-C for a CodePath iOS Demo
 
 ## Screen Recording
-<img src="http://i.imgur.com/j0L1TZO.gif" title="source: imgur.com" />
+<img src="http://i.imgur.com/iYL2sBd.gif" title="source: imgur.com" />
 
 ## User Stories
  - Users can view Popular Instagram Photos with included Username, Caption, and Image (Thumbnail)
@@ -13,7 +13,7 @@ iOS Instagram Client written in Objective-C for a CodePath iOS Demo
 
 
 ## Libraries and Implementations
- - Alamofire
+ - AFNetworking
  - Instagram API
 
 
