@@ -16,4 +16,6 @@
 @property (weak, nonatomic) IBOutlet UIImageView *imageViewStandardResolution;
 @property (weak, nonatomic) IBOutlet UITextView *caption;
 
+- (IBAction)showFullPhotoWithZoom:(id)sender;
+
 @end

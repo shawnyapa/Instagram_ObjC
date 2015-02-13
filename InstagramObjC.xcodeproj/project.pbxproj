@@ -17,6 +17,7 @@
 		29C483FE1A882D6400BA23F4 /* InstaListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 29C483FD1A882D6400BA23F4 /* InstaListViewController.m */; };
 		29C484011A882DF400BA23F4 /* InstaModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 29C484001A882DF400BA23F4 /* InstaModel.m */; };
 		29C484041A882E2900BA23F4 /* InstaDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 29C484031A882E2900BA23F4 /* InstaDetailViewController.m */; };
+		29E67BDE1A8D73E800C3F08B /* FullScreenPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 29E67BDD1A8D73E800C3F08B /* FullScreenPhotoViewController.m */; };
 		CA0033C47736050B6F4265B2 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 410CA471CA47C704FA7AABB9 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +52,8 @@
 		29C484001A882DF400BA23F4 /* InstaModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstaModel.m; sourceTree = "<group>"; };
 		29C484021A882E2900BA23F4 /* InstaDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstaDetailViewController.h; sourceTree = "<group>"; };
 		29C484031A882E2900BA23F4 /* InstaDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstaDetailViewController.m; sourceTree = "<group>"; };
+		29E67BDC1A8D73E800C3F08B /* FullScreenPhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FullScreenPhotoViewController.h; sourceTree = "<group>"; };
+		29E67BDD1A8D73E800C3F08B /* FullScreenPhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FullScreenPhotoViewController.m; sourceTree = "<group>"; };
 		410CA471CA47C704FA7AABB9 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A3F9E3A3CEDBD40E27B2BF8 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -105,6 +108,8 @@
 				2982FE511A8837E1004F4865 /* InstaCellTableViewCell.m */,
 				29C484021A882E2900BA23F4 /* InstaDetailViewController.h */,
 				29C484031A882E2900BA23F4 /* InstaDetailViewController.m */,
+				29E67BDC1A8D73E800C3F08B /* FullScreenPhotoViewController.h */,
+				29E67BDD1A8D73E800C3F08B /* FullScreenPhotoViewController.m */,
 				29C483FF1A882DF400BA23F4 /* InstaModel.h */,
 				29C484001A882DF400BA23F4 /* InstaModel.m */,
 				29C483DD1A882CB400BA23F4 /* Main.storyboard */,
@@ -298,6 +303,7 @@
 				29C483D61A882CB400BA23F4 /* main.m in Sources */,
 				2982FE521A8837E1004F4865 /* InstaCellTableViewCell.m in Sources */,
 				29C484041A882E2900BA23F4 /* InstaDetailViewController.m in Sources */,
+				29E67BDE1A8D73E800C3F08B /* FullScreenPhotoViewController.m in Sources */,
 				29C484011A882DF400BA23F4 /* InstaModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

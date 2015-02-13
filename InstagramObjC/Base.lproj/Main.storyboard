@@ -27,7 +27,7 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZbJ-w8-crU" id="aeO-pO-qXz">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wol-sg-4aV">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wol-sg-4aV">
                                                     <rect key="frame" x="8" y="8" width="146" height="146"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="146" id="95q-ak-ldF"/>
@@ -59,6 +59,11 @@
                                                 <constraint firstAttribute="bottomMargin" secondItem="BH3-rf-iuR" secondAttribute="bottom" id="osQ-oO-JgA"/>
                                                 <constraint firstItem="BH3-rf-iuR" firstAttribute="top" secondItem="ISu-Qw-AsO" secondAttribute="bottom" constant="8" id="p2X-Vl-z7q"/>
                                             </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="XU7-gh-m4f"/>
+                                                </mask>
+                                            </variation>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="caption" destination="BH3-rf-iuR" id="bBf-x1-T51"/>
@@ -122,6 +127,15 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zcs-p9-2iW">
+                                <rect key="frame" x="16" y="74" width="568" height="320"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="showFullPhotoWithZoom:" destination="9pj-mK-gst" eventType="touchUpInside" id="Bfw-5P-7M9"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -129,23 +143,79 @@
                             <constraint firstItem="leA-L3-dI5" firstAttribute="top" secondItem="6zA-rO-MtC" secondAttribute="bottom" id="Dj5-Nq-yip"/>
                             <constraint firstItem="cxJ-sS-Lcp" firstAttribute="leading" secondItem="PO5-5H-bEg" secondAttribute="leadingMargin" id="Ep2-Nb-iCF"/>
                             <constraint firstItem="9xE-na-2KZ" firstAttribute="top" secondItem="PO5-5H-bEg" secondAttribute="topMargin" constant="74" id="GIS-aS-C9e"/>
+                            <constraint firstItem="Zcs-p9-2iW" firstAttribute="top" secondItem="9xE-na-2KZ" secondAttribute="top" id="OPc-Ib-Tgq"/>
                             <constraint firstItem="6zA-rO-MtC" firstAttribute="leading" secondItem="PO5-5H-bEg" secondAttribute="leadingMargin" id="VyR-xW-2ds"/>
                             <constraint firstItem="9xE-na-2KZ" firstAttribute="trailing" secondItem="PO5-5H-bEg" secondAttribute="trailingMargin" id="Wqz-XR-MIg"/>
                             <constraint firstItem="6zA-rO-MtC" firstAttribute="top" secondItem="cxJ-sS-Lcp" secondAttribute="bottom" constant="8" id="Xgm-TB-puO"/>
                             <constraint firstItem="9xE-na-2KZ" firstAttribute="leading" secondItem="PO5-5H-bEg" secondAttribute="leadingMargin" id="ZbX-2O-ODQ"/>
                             <constraint firstItem="cxJ-sS-Lcp" firstAttribute="top" secondItem="9xE-na-2KZ" secondAttribute="bottom" constant="8" id="b6Y-H3-eZ3"/>
                             <constraint firstAttribute="trailingMargin" secondItem="6zA-rO-MtC" secondAttribute="trailing" id="mwh-gP-baY"/>
+                            <constraint firstItem="Zcs-p9-2iW" firstAttribute="leading" secondItem="9xE-na-2KZ" secondAttribute="leading" id="uhy-Sj-lZd"/>
+                            <constraint firstItem="Zcs-p9-2iW" firstAttribute="bottom" secondItem="9xE-na-2KZ" secondAttribute="bottom" id="xTo-H5-AXE"/>
+                            <constraint firstItem="Zcs-p9-2iW" firstAttribute="trailing" secondItem="9xE-na-2KZ" secondAttribute="trailing" id="z4H-kE-luB"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="caption" destination="6zA-rO-MtC" id="KJ1-Va-Zx3"/>
                         <outlet property="imageViewStandardResolution" destination="9xE-na-2KZ" id="x82-Rr-TIl"/>
                         <outlet property="name" destination="cxJ-sS-Lcp" id="jxR-Pa-DLq"/>
+                        <segue destination="W6a-fH-YFf" kind="show" identifier="showFullPhotoWithZoom" id="1Og-E0-s0w"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fgq-ht-fYP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1736" y="332"/>
+        </scene>
+        <!--Full Screen Photo View Controller-->
+        <scene sceneID="AWr-I5-ha5">
+            <objects>
+                <viewController id="W6a-fH-YFf" customClass="FullScreenPhotoViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="EyY-sO-hdr"/>
+                        <viewControllerLayoutGuide type="bottom" id="9aF-Gx-H4m"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3cA-h8-L0m">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" maximumZoomScale="3" translatesAutoresizingMaskIntoConstraints="NO" id="5Xt-a4-394">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="k4g-HO-ylv">
+                                        <rect key="frame" x="8" y="0.0" width="584" height="600"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="k4g-HO-ylv" secondAttribute="trailing" constant="-8" id="1Ho-Y3-hfV"/>
+                                    <constraint firstAttribute="centerX" secondItem="k4g-HO-ylv" secondAttribute="centerX" id="CeL-eS-Mk6"/>
+                                    <constraint firstAttribute="bottom" secondItem="k4g-HO-ylv" secondAttribute="bottom" id="Fu7-aX-Egj"/>
+                                    <constraint firstItem="k4g-HO-ylv" firstAttribute="leading" secondItem="5Xt-a4-394" secondAttribute="leading" constant="8" id="QcC-J0-gEL"/>
+                                    <constraint firstAttribute="centerY" secondItem="k4g-HO-ylv" secondAttribute="centerY" id="cHZ-TK-r6u"/>
+                                    <constraint firstItem="k4g-HO-ylv" firstAttribute="top" secondItem="5Xt-a4-394" secondAttribute="top" id="mUQ-NN-si0"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="W6a-fH-YFf" id="Awq-lG-xDE"/>
+                                </connections>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="5Xt-a4-394" firstAttribute="leading" secondItem="3cA-h8-L0m" secondAttribute="leadingMargin" constant="-16" id="0Q2-zT-JaQ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="5Xt-a4-394" secondAttribute="trailing" constant="-16" id="JFb-hn-gfN"/>
+                            <constraint firstAttribute="centerY" secondItem="5Xt-a4-394" secondAttribute="centerY" id="JYF-8A-OUp"/>
+                            <constraint firstItem="5Xt-a4-394" firstAttribute="top" secondItem="3cA-h8-L0m" secondAttribute="topMargin" id="TK7-V8-83i"/>
+                            <constraint firstAttribute="centerX" secondItem="5Xt-a4-394" secondAttribute="centerX" id="fBW-R2-XPj"/>
+                            <constraint firstItem="9aF-Gx-H4m" firstAttribute="top" secondItem="5Xt-a4-394" secondAttribute="bottom" id="hBE-Mc-ksB"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="photoView" destination="k4g-HO-ylv" id="jRG-Jt-aEu"/>
+                        <outlet property="scrollView" destination="5Xt-a4-394" id="wbx-Z3-dfF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Itq-eX-nHv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2406" y="332"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Cqe-gL-dds">
